@@ -1,0 +1,17 @@
+#Docker File
+FROM node:alpine
+WORKDIR /app
+COPY package*.json ./
+COPY . /app
+EXPOSE 3000
+RUN npm init -y
+RUN npm install express
+CMD ["node", "app.js"]
+
+
+
+
+
+
+
+
